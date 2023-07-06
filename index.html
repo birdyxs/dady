@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - dady</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE><html><head>
+<title>dady</title>
+
+<style type="text/css">
+
+@-webkit-keyframes appear {
+    0% {opacity:0;}
+    25% {opacity:0.25;}
+    50% {opacity:0.5;}
+    75% {opacity:0.75;}
+    100% {opacity:1;}
+}
+ 
+@keyframes appear {
+    0% {opacity:0;}
+    25% {opacity:0.25;}
+    50% {opacity:0.5;}
+    75% {opacity:0.75;}
+    100% {opacity:1;}
+}
+
+@-webkit-keyframes spaceboots {
+    0% {-webkit-transform:translate(2px, 1px) rotate(0deg);}
+    10% {-webkit-transform:translate(-1px, -2px) rotate(-1deg);}
+    20% {-webkit-transform:translate(-3px, 0px) rotate(1deg);}
+    30% {-webkit-transform:translate(0px, 2px) rotate(0deg);}
+    40% {-webkit-transform:translate(1px, -1px) rotate(1deg);}
+    50% {-webkit-transform:translate(-1px, 2px) rotate(-1deg);}
+    60% {-webkit-transform:translate(-3px, 1px) rotate(0deg);}
+    70% {-webkit-transform:translate(2px, 1px) rotate(-1deg);}
+    80% {-webkit-transform:translate(-1px, -1px) rotate(1deg);}
+    90% {-webkit-transform:translate(2px, 2px) rotate(0deg);}
+    100% {-webkit-transform:translate(1px, -2px) rotate(-1deg);}
+}
+
+@keyframes spaceboots {
+    0% {-webkit-transform:translate(2px, 1px) rotate(0deg);}
+    10% {-webkit-transform:translate(-1px, -2px) rotate(-1deg);}
+    20% {-webkit-transform:translate(-3px, 0px) rotate(1deg);}
+    30% {-webkit-transform:translate(0px, 2px) rotate(0deg);}
+    40% {-webkit-transform:translate(1px, -1px) rotate(1deg);}
+    50% {-webkit-transform:translate(-1px, 2px) rotate(-1deg);}
+    60% {-webkit-transform:translate(-3px, 1px) rotate(0deg);}
+    70% {-webkit-transform:translate(2px, 1px) rotate(-1deg);}
+    80% {-webkit-transform:translate(-1px, -1px) rotate(1deg);}
+    90% {-webkit-transform:translate(2px, 2px) rotate(0deg);}
+    100% {-webkit-transform:translate(1px, -2px) rotate(-1deg);}
+}
+ 
+::-webkit-scrollbar {height:7px; width:7px;}
+::-webkit-scrollbar-track-piece {background:#dcdcdc;}
+ 
+::-webkit-scrollbar-thumb {
+    width:7px; height:7px;
+    background:#010101;
+    border:2px solid #dcdcdc;
+}
+ 
+
+::selection {background:#363636; color:#969696;}
+::-moz-selection {background:#363636; color:#969696;}
+::-webkit-selection {background:#363636; color:#969696;}
+
+
+.ui-tooltip {position:absolute; z-index:214748364789; margin:5px 20px;}
+ 
+.ui-tooltip-content {
+    max-width:300px;
+    padding:5px 10px;
+    background:#2c2c2c;
+    line-height:150%;
+    border-bottom:1px solid #963235;
+    font-size:8px;
+    letter-spacing:1px;
+    font-weight:400;
+    font-family:'Oxygen', sans-serif;
+    text-transform:uppercase;
+    color:#FFFFFF;
+}
+
+
+html, body {cursor:url('http://media.tumblr.com/28b53f437be2ef9f495c31d226b7f387/tumblr_inline_n0lc39S8lT1r1tugg.gif'), progress!important;}
+ 
+a, a:hover, .pxu-photo, .photolight, .like_toggle, .like_button, #sb {cursor:url(http://media.tumblr.com/14770974325c40b8aefe3ecd4e360253/tumblr_inline_n0lc3j3Jah1r1tugg.png), progress!important;}
+ 
+html, body {width:100%; height:100%; margin:0; padding:0;}
+ 
+body {
+    background-color:#010101;
+    background-attachment:fixed;
+    background-repeat:repeat;
+    word-wrap:break-word;
+    overflow:auto;
+    margin-left:0px;
+    margin-top:0px;
+    color:#969696;
+    font-family:'Oxygen', sans-serif;
+    letter-spacing:0.2px;
+    font-size:11px;
+    line-height:170%;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+ 
+a {
+    text-decoration:none;
+    color:#963235;
+    transition:0.2s ease-in-out;
+}
+ 
+a:hover {color:#888888;}
+ 
+i, italic, em{color:#963235; text-transform:italic;}
+b, bold, strong{color:#666666; font-weight:700;}
+ 
+img {border:none;}
+img:hover {border:none;}
+iframe:hover {border:none;}
+ 
+h1, h2, h3 {
+    font-size:1.2em;
+    font-family:'Playfair Display', serif;
+    font-weight:400;
+    color:#963235;
+}
+
+b h1, b h2, b h3 {font-weight:700;}
+
+small, sup, sub {
+    font-size:9px;
+    line-height:15px; 
+    vertical-align:baseline;
+}
+
+.posts ol {counter-reset:order;}
+
+.posts ol li {
+    list-style:none;
+    margin:2px 0px; 
+    display:block; 
+    position:relative;
+}
+ 
+.posts ol li::before {
+    content:counter(order, decimal-leading-zero);
+    counter-increment:order;
+    position:absolute;
+    margin-left:-20px;
+    line-height:150%;
+    color:#963235;
+    top:-2px;
+    letter-spacing:-0.5px;
+    font:italic bold 14px 'Playfair Display', serif;
+}
+ 
+.posts ul li {
+    list-style-type:none;
+    display:block;
+    margin:2px 0px;
+}
+ 
+.posts ul li::before {
+    margin:3px 0 0 -18px;
+    position:absolute;
+    content:"\e838";
+    font:12px "Outicons";
+    color:#963235;
+}
+ 
+blockquote {
+    margin:10px 0px;
+    margin-left:10px;
+    display:block;
+    border-left:1px solid #963235;
+    padding:0px 10px;
+}
+ 
+blockquote img {max-width:100%!important;}
+ 
+pre, code {
+    background:#F6F6F6;
+    padding:10px;
+    display:block;
+    letter-spacing:1px;
+}
+
+#all {
+    position:relative;
+    margin:0px auto;
+    
+    width:calc((350px + 40px) * 3);
+    padding-left:10px;
+    
+}
+ 
+.container {padding:15px 20px; background:#010101;}
+
+.photo > .text, .video > .text, .audio > .text {
+    
+    padding:10px 15px;
+    background:#010101;
+}
+
+.text a, .sourcez a, .question a {border-bottom:1px solid #eaeaea; padding-bottom:1px;}
+.text a:hover, .sourcez a:hover, .question a:hover {border-bottom:1px solid #888888;}
+
+img.tumblr_avatar {
+    width:20px;
+    height:20px;
+    border-radius:2px;
+    margin-right:10px;
+    vertical-align:middle;
+    display:inline-block;
+}
+ 
+blockquote.tumblr_parent {
+    margin:10px 0px;
+    padding:0px;
+    border:0px solid transparent;
+}
+ 
+a.tumblr_blog {
+    display:inline-block;
+    vertical-align:middle;
+    border-bottom:0px solid transparent;
+    font:bold 11px/20px 'Oxygen', sans-serif;
+    text-transform:lowercase;
+}
+ 
+a.tumblr_blog:hover {border-bottom:0px solid transparent;}
+
+.tumblr_video_container {width:auto!important; height:auto!important;}
+.singlepic {display:block;}
+
+
+ 
+.photo img {
+    max-width:100%;
+    transition:0.6s ease-in-out;
+    
+}
+ 
+.jrc, .llp {
+    position:relative;
+    padding:5px;
+    display:block;
+    transition:0.6s ease-in-out;
+}
+ 
+.pthead {
+    text-align:center;
+    padding:10px;
+    line-height:150%;
+    font-size:15px;
+    font-family:'Playfair Display', serif;
+    background:#F6F6F6;
+    color:#666666;
+    
+}
+ 
+.llp {
+    background:transparent;
+    padding:5px 20px; 
+    
+    background:#010101;
+    font-size:12px;
+    font-weight:bold;
+    font-style:italic;
+    text-transform:lowercase;
+    color:#666666;
+    transition:0.3s ease-in-out;
+    font-family:'Playfair Display', serif;
+    line-height:150%;
+    border-left:0px solid #f6f6f6;
+    transition:0.6s ease-in-out;
+} 
+
+.llp:hover .jrc {color:#fff;}
+.llp:hover {background:#963235; border-left:25px solid #963235;}
+
+#banner {
+    position:relative;
+    width:100%;
+    height:calc(100% - 160px);
+    
+    top:0px; 
+    left:0px;
+    background-size:auto 100%;
+    background-position:center bottom;
+    background-color:#040308;
+    text-align:center;
+}
+
+#banner img {
+    max-width:100%;
+    max-height:100%;
+    width:auto;
+    height:auto; 
+    position:absolute;
+    bottom:0; 
+    left:0; 
+    right:0; 
+    margin:auto;
+}
+
+#header {
+    position:relative;
+    
+    top:0px;
+    left:0px;
+    width:calc(100% - 50px);
+    height:130px;
+    padding:15px 25px;
+    background:#151515;
+    box-shadow:0px 1px 3px rgba(0, 0, 0, 0.3);
+    -webkit-animation:appear 1s;
+    animation:appear 1s;
+}
+
+#hagane {margin:0 auto; width:480px; padding:10px; height:110px;}
+#main, #links, #updt {margin-left:140px; display:none;}
+#links {display:block;}
+
+.head {
+    color:#631212;
+    font-size:15px;
+    text-transform:lowercase;
+    font-style:italic;
+    font-family:'Playfair Display', serif;
+    font-weight:bold;
+    display:block;
+    margin:0px 0px;
+    height:20px;
+    line-height:20px;
+}
+
+#main a, #links a, #updt a {color:#dcdcdc;}
+#main a:hover, #links a:hover, #updt a:hover {color:#631212;}
+
+#desc {
+    margin-top:5px;
+    margin-right:10px;
+    font-size:10px;
+    line-height:170%;
+    color:#ababab;
+    text-align:justify;
+    padding-right:10px;
+    max-height:80px;
+    overflow:auto;
+}
+
+#desc::-webkit-scrollbar {width:5px; height:5px;}
+#desc::-webkit-scrollbar-track-piece {background:#2c2c2c;}
+#desc::-webkit-scrollbar-thumb {border:2px solid #2c2c2c;}
+
+.subt {
+    font-size:8px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-weight:400;
+    height:15px;
+    line-height:15px;
+    padding-bottom:5px;
+    border-bottom:1px solid #2c2c2c;
+    color:#ababab;
+    margin-right:10px;
+    width:330px;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+.auto {
+    width:330px;
+    margin-left:-5px;
+    margin-right:10px;
+    overflow:hidden;
+    font-size:8px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-weight:400;
+}
+
+.auto a {
+    display:block;
+    width:60px;
+    text-align:center;
+    float:left;
+    overflow:hidden;
+    border-bottom:1px solid #2c2c2c;
+    color:#dcdcdc;
+    padding:5px;
+}
+
+.auto.more a {
+    margin:1px 5px;
+    line-height:9px;
+    height:9px;
+}
+
+.auto.less a {
+    margin:3px 5px;
+    line-height:14px;
+    height:14px;
+}
+
+.auto a:hover {
+    border-color:#963235;
+    color:#ffffff;
+}
+
+.imore {
+    margin-right:10px;
+    padding-right:10px;
+    overflow:auto;
+    max-height:75px;
+    margin-top:5px;
+    font-size:8px;
+    font-weight:400;
+    text-transform:uppercase;
+    letter-spacing:0.8px;
+    color:#ababab;
+}
+
+.imore::-webkit-scrollbar {width:5px; height:5px;}
+.imore::-webkit-scrollbar-thumb {border:2px solid #2c2c2c;}
+.imore::-webkit-scrollbar-track-piece {background:transparent; border:0px solid transparent;}
+
+.imore span.iline {
+    display:block; 
+    margin:0px 0px;
+    white-space:nowrap;
+    overflow:hidden;
+    height:15px;
+    line-height:15px;
+}
+
+.imore span.iline b {
+    font-weight:700;
+    color:#963235;
+    margin-right:3px;
+}
+
+#sub {
+    width:150px;
+    display:inline-block;
+    outline:none!important;
+    height:15px; 
+    line-height:15px;
+    padding:3px 0px;
+    border:0px solid transparent;
+    background:transparent;
+    font-size:8px;
+    letter-spacing:1px;
+    opacity:1;
+    vertical-align:bottom;
+    color:#ababab;
+    text-transform: uppercase;
+}
+ 
+#sb {
+    width:15px;
+    border:0px solid transparent;
+    display:inline-block;
+    outline:none!important;
+    margin-right:10px;
+    padding:5px 6px;
+    margin-top:-2px;
+    height:15px;
+    font-size:14px;
+    line-height:0px;
+    vertical-align:top;
+    background:transparent;
+    color:#963235;
+}
+
+#oct {
+    position:absolute;
+    height:120px;
+    overflow:hidden;
+    width:120px;
+    margin-top:-5px;
+    margin-left:0px;
+    border-radius:50px;
+    z-index:2938754;
+    transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+}
+
+#oct:after {
+    background:url(https://i.ibb.co/NY3699s/kankidadd.webp) no-repeat;
+    background-size:100px 100px;
+    border:10px solid #262626;
+    content:"";
+    top:0; bottom:0;
+    left:0; right:0;
+    position:absolute;
+    border-radius:50px;
+    transform:rotate(-45deg);
+    -webkit-transform:rotate(-45deg);
+}
+
+.horizontal {height:10px; width:45px;}
+.vertical {width:10px; height:45px;}
+.line {height:10px; width:90px;}
+.border {width:10px; height:90px;}
+
+.horizontal, .vertical, .line, .border {
+    background:#262626;
+    display:block;
+    position:absolute;
+    z-index:1;
+}
+
+.top {top:0px; left:25%; margin-left:5px;}
+.left {left:0px; top:25%; margin-top:5px;}
+.right {right:0px; bottom:25%; margin-bottom:5px;}
+.bottom {bottom:0px; right:25%; margin-right:5px;}
+
+#menu {
+    width:86px;
+    height:86px;
+    overflow:hidden;
+    position:absolute;
+    top:17px; bottom:17px;
+    left:17px; right:17px;
+    z-index:29387520;
+    border-radius:35px;
+    opacity:0;
+    transform:rotate(-45deg);
+    -webkit-transform:rotate(-45deg);
+    transition:0.6s ease-in-out;
+}
+
+#header:hover #menu {opacity:1;}
+
+#menu:after {
+    background:rgba(15,15,15, 0.7);
+    content:"";
+    top:0; bottom:0;
+    left:0; right:0;
+    z-index:29387518;
+    position: absolute;
+    transform:rotate(-45deg);
+    -webkit-transform:rotate(-45deg);
+}
+
+.nav {
+    position:relative;
+    z-index:29387519; 
+    padding:10px; 
+    text-align:center;
+    overflow:hidden;
+    transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+}
+
+.nav a {
+    display:inline-block;
+    position:relative;
+    float:left;
+    text-align:center;
+    width:15px;
+    height:15px;
+    padding:5px;
+    font-size:16px;
+    line-height:0px;
+    border-radius:100%;
+    background:rgba(53, 53, 53, 0.6);
+    color:#dcdcdc;
+    margin:4px;
+    cursor:help;
+    outline:0px solid transparent!important;
+    transform:rotate(-45deg);
+    -webkit-transform:rotate(-45deg);
+}
+
+.nav a, .nav a span {transition:0.3s ease-in-out;}
+.nav a:hover {background:#2c2c2c;}
+.nav a.select {background:#963235;}
+
+.nav a .oi-headset {position:absolute; left:5px;}
+
+.billy {
+    position:relative;
+    overflow:hidden;
+    width:50px;
+    height:20px;
+    opacity:0;
+	margin:-25px 0px 0px -22.5px;
+    transition:0.3s ease-in-out;
+}
+
+a.fullmetal {overflow:hidden;}
+a.fullmetal:hover .oi-headset {margin-left:-25px; opacity:0;}
+a.fullmetal:hover .billy {opacity:1; margin-top:0px;}
+
+
+#footer {
+    position:fixed;
+    display:none;
+    background:#222222;
+    width:calc((350px + 40px) * 3 - 30px);
+    left:calc((100% + 30px - ((350px + 40px) * 3)) / 2);
+    height:40px;
+    bottom:0px;
+    z-index:2147483647;
+    padding:5px 15px;
+    line-height:40px;
+    border-bottom:1px solid #963235;
+}
+
+#topbar {
+    position:fixed;
+    display:none;
+    background:#222222;
+    text-align:center;
+    width:100%;
+    height:45px;
+    top:0px;
+    left:0px;
+    z-index:2147483647;
+    padding:6px 0px;
+    line-height:45px;
+    border-top:3px solid #963235;
+    box-shadow:0px 1px 3px rgba(0, 0, 0, 0.3);
+    
+}
+
+#title {
+    font-size:15px;
+    line-height:40px;
+    font-weight:700;
+    font-style:italic;
+    text-transform:lowercase;
+    font-family:'Playfair Display', serif;
+    color:#963235;
+    display:inline-block;
+    position:absolute;
+    right:15px;
+}
+
+#navigation, #pagination {
+    position:relative;
+    display:inline-block;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-weight:400;
+    height:15px;
+    padding:10px;
+    background:#222222;
+    z-index:9999999999;
+}
+
+#navigation {padding:12px 10px;}
+
+#navigation a, #pagination a {
+    position:relative;
+    display:inline-block;
+    float:left;
+    color:#dcdcdc;
+    padding:5px 15px;
+    height:10px;
+    line-height:10px;
+    border-bottom:3px double transparent;
+}
+
+#navigation a:hover, #pagination a:hover, #pagination a.current_page, #opus:hover {
+    border-color:#963235;
+    color:#ffffff;
+    -webkit-animation-name:spaceboots;
+    -webkit-animation-duration:1s;
+    -webkit-transform-origin:50% 50%;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+    animation-name:spaceboots;
+    animation-duration:1s;
+    transform-origin:50% 50%;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+#fuckjquery {
+    position:absolute;
+    width:16px;
+    height:16px;
+    line-height:16px;
+    padding:7px 22px;
+    text-align:center;
+    background:rgba(25,25,25, 0.7);
+    top:-30px;
+    border-top-left-radius:60px;
+    border-top-right-radius:60px;
+    left:50%;
+    margin-left:-5px;
+    transition:0.3s ease-in-out;
+}
+
+#fuckjquery:hover {background:rgba(25,25,25, 0.9);}
+#fuckjquery img {display:block; width:16px; height:16px; margin-top:3px;}
+
+#sidebar {
+    position:absolute;
+    margin-left:0px;
+    margin-top:50px;
+    top:0px;
+    width:180px;
+    -webkit-animation:appear 1s;
+    animation:appear 1s;
+}
+
+.fixed {position:fixed!important; top:35px!important;}
+.side {display:block; margin:0px; width:180px;}
+
+.block {
+    background:#FFFFFF;
+    border-color:#FFFFFF;
+    border-style:solid;
+    border-width:10px 5px;
+    padding:0px 5px;
+    font-size:10px;
+    letter-spacing:0.2px;
+    overflow:auto;
+    max-height:100px;
+    width:160px;
+    text-align:justify;
+    line-height:150%;
+    font-weight:400;
+}
+
+.block::-webkit-scrollbar {width:5px; height:5px;}
+.block::-webkit-scrollbar-thumb {border:2px solid #FFFFFF;}
+.block::-webkit-scrollbar-track-piece {background:transparent;}
+
+.photo-slideshow {margin-bottom:-8px;} 
+
+</style><!------ JQUERY ------><!-- main scripts --><script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js" type="text/javascript"></script><script src="https://static.tumblr.com/6hsqxdt/QBym35odk/jquery.masonry.js"></script><script src="https://static.tumblr.com/p0knose/7bZngj5dv/imagesloaded.pkgd.min.js"></script>
+<script src="https://static.tumblr.com/qudkd6d/Az6nkemqr/pxuphotoset.min.js" type="text/javascript"></script><script src ="https://static.tumblr.com/fwgzvyf/l6jnyutne/shythemes.vr.js" type="text/javascript"></script><script src="https://static.tumblr.com/p0knose/8Hbocatf1/unnest.min.js" type="text/javascript"></script><script type="text/javascript" src="https://static.tumblr.com/p0knose/441ojavx0/unparalleled.js"></script><script>
+$(document).ready(function(){
+    $("#navigation").prepend($(".auto").html());
+    $(".sc a").hover(function(){
+        var curWidth = $(this).width(),
+        autoWidth = $(this).css({"width": "auto"}).width();
+        $(this).width(curWidth).animate({width: autoWidth});
+    }, function(){
+        $(this).animate({"width":"0px"});
+    });
+    var numLinks = $(".auto").children().length;
+    if(numLinks > 8){
+        $(".auto").addClass("more");
+    } else if (numLinks > 4 && numLinks <= 8) {
+        $(".auto").addClass("less");
+    } else if (numLinks <= 4){
+        $(".auto").addClass("less");
+        $("#links").css("padding-top","15px");
+    }
+    var containWidth = $("#all").width();
+    var windowWidth = window.innerWidth;
+    $("#footer").css("width", containWidth-70);
+    $("#footer").css("left", (windowWidth-containWidth+40)/2);
+    $(window).resize(function(){
+        $("#footer").css("left", (windowWidth - containWidth + 40)/2);
+    });
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop();
+        var releaseOverload = $("#header").height() + $("#banner").height();
+        if (scroll >= releaseOverload){
+            $(".iframe-controls--desktop").addClass("inverter");
+        } else {
+            $(".iframe-controls--desktop").removeClass("inverter");
+        }
+    });
+});
+</script><script type="text/javascript">
+$(document).ready(function(){
+    // masonry
+    var $container = $("#postmargin");
+    $container.masonry({
+        itemSelector:".posts",
+    });
+    $container.imagesLoaded(function(){
+        $container.masonry();
+    });
+    
+  
+    $(window).scroll(function(){
+        var scroll = $(window).scrollTop(),
+            release = $("#header").height()+$("#banner").innerHeight()-5;
+        if (scroll >= release){
+            $("#sidebar").addClass("fixed");
+        } else {
+            $("#sidebar").removeClass("fixed");
+        };
+    });
+    
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+    var $selected = $('.nav a[href$="links"]');
+    $selected.addClass("select");
+    $(".posts").unNest({
+        yourCaption:".text",
+        newCaptionUsername:true,
+        tumblrAvatars:true,
+        usernameColon:false
+    }, function(){
+        $("#postmargin").masonry();
+    });
+});
+</script><script type="text/javascript">
+$(document).ready(function(){
+    $(window).scroll(function(){
+    var scroll = $(window).scrollTop() + $(window).height();
+    var paginate = $(document).height() - $("#header").height();
+        if (scroll >= paginate){
+            $("#footer").fadeIn(600);
+        } else {
+            $("#footer").fadeOut(600);
+        }
+    });
+});
+</script>
+</head>
+  
+<body>
+<div id="topbar"></div><div id="banner"><img src="https://i.ibb.co/vX7Bz2X/dadyx.png"></div><div id="header"><div id="hagane">
+  
+<div id="oct"><div class="horizontal top"></div><div class="horizontal bottom"></div><div class="vertical left"></div><div class="vertical right"></div>
+  
+</div>
+  
+
+
+<div class="tab" id="links"><div class="head">iDady (11102220);</div><div class="subt">Bienvenido a mi xs. Soy Dady, de Perú
+</div><div class="auto"><a target="_blank" href="https://xat.com/trade">Find me</a><a target="_blank" href="https://xat.me/yunah">créd.</a></div></div>
+
+</div></div>
+
+
+ 
+<script >
+        (function (w,d) {
+            'use strict';
+            var l = function(el, type, listener, useCapture) {
+                el.addEventListener ?
+                el.addEventListener(type, listener, !!useCapture) :
+                el.attachEvent && el.attachEvent('on' + type, listener, !!useCapture);
+            };
+            var a = function () {
+                                if (d.getElementById('tumblr-cdx')) {
+                    return;
+                }
+                var s = d.createElement('script');
+                var el = d.getElementsByTagName('script')[0];
+                s.async = true;
+                s.src = 'https://assets.tumblr.com/assets/scripts/vendor/cedexis/cedexis.radar.js?_v=7450eec657e34e1e41dac4e1af96a170';
+                s.type = 'text/javascript';
+                s.id = 'tumblr-cdx';
+                d.body.appendChild(s);
+            };
+            l(w,'load',a);
+        }(window, document));
+</script>
+  
+<!--
+        MUSIC PLAYER #01 by glenthemes
+        ♬ glenthpvs.tumblr.com/player01
+--->
+<script src="//cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+<script src="//glenthemes.github.io/-music-/glenplayer01.js"></script>
+<link href="//glenthemes.github.io/-music-/glenplayer01.css" rel="stylesheet">
+
+<style element="glenplayer01">
+:root {
+    --MusicPlayer-Distance-From-Bottom:30px;
+    
+    --MusicPlayer-Frame-Thickness:12px;
+    --MusicPlayer-Frame-Color:#transparent;
+    --MusicPlayer-Frame-Transparency:40%;
+    
+    --MusicPlayer-Text-Background:#transparent;
+    --MusicPlayer-Text-Padding:12px;
+    --MusicPlayer-Text-Align:right;
+    
+    --MusicPlayer-Text-TOP-Size:10px;
+    --MusicPlayer-Text-TOP-Color:#963235;
+    
+    --MusicPlayer-Text-BOTTOM-Size:10px;
+    --MusicPlayer-Text-BOTTOM-Color:#963235;
+    
+    --MusicPlayer-Circle-Size:50px;
+    --MusicPlayer-Circle-Background:#transparent;
+    
+    --MusicPlayer-PlayButton-Size:10px;
+    --MusicPlayer-PlayButton-Color:#963235;
+    
+    --MusicPlayer-Bar-Thickness:2px;
+    --MusicPlayer-Bar-Spacing:2px;
+    --MusicPlayer-Bar-Color:#963235;
+    
+    --MusicPlayer-SlideIn-Speed:0.69s;
+    --MusicPlayer-SlideOut-Speed:1s;
+}
+</style>
+
+<div glenplayer01>
+    <div top-text>Young Bleu</div>
+    <div bottom-text>Ice on my baby</div>
+    
+    <audio id="music-id" src="https://drive.google.com/uc?export=download&id=1RsO5b4yZu07N_XTTVVJd7gi-4bkYhmnd"></audio>
+</div>
+<!--- end music player --->
+     
+</body></html>
+<!-- partial -->
+  
+</body>
+</html>
